@@ -1,4 +1,4 @@
-package bond.bony;
+package bond.bony.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
@@ -33,7 +33,7 @@ public class PracticeFormTest {
         String birthMonth = "March";
         String birthMonthN = "2";
         String birthYear = "1999";
-        String pictureFile = "teddy-bears.jpg";
+        String pictureFile = "img/teddy-bears.jpg";
 
 
         open("/automation-practice-form");
