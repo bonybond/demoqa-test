@@ -7,7 +7,6 @@ import com.github.javafaker.Faker;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 import static bond.bony.utils.RandomUtils.getRandomInt;
 import static bond.bony.utils.RandomUtils.getRandomMonth;
