@@ -21,12 +21,14 @@ public class RegistrationFormPage {
     SelenideElement stateCityWrapper = $("#stateCity-wrapper");
     SelenideElement state = $("#state");
     SelenideElement city = $("#city");
-    //SelenideElement submitButton = $("#submit");
+    SelenideElement submitButton = $("#submit");
 
 
     //actions
     public RegistrationFormPage openPage(){
         open("/automation-practice-form");
+        executeJavaScript("$('footer').remove()");
+        executeJavaScript("$('#fixedban').remove()");
         return this;
     }
 
@@ -105,9 +107,7 @@ public class RegistrationFormPage {
     }
 
     public void submitRegistration(){
-        //executeJavaScript("document.body.style.zoom='65%'");
-        //submitButton.scrollTo().click();
-        $("#userNumber").pressEnter();
+        submitButton.scrollTo().click();
     }
 
 }
