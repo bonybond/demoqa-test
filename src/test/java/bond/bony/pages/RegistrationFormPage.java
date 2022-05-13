@@ -21,6 +21,7 @@ public class RegistrationFormPage {
     SelenideElement stateCityWrapper = $("#stateCity-wrapper");
     SelenideElement state = $("#state");
     SelenideElement city = $("#city");
+    //SelenideElement submitButton = $("#submit");
 
 
     //actions
@@ -92,15 +93,21 @@ public class RegistrationFormPage {
 
 
     public RegistrationFormPage selectState(String value){
-        state.click();
+        state.scrollTo().click();
         stateCityWrapper.parent().$(byText(value)).click();
         return this;
     }
 
     public RegistrationFormPage selectCity(String value){
-        city.click();
+        city.scrollTo().click();
         stateCityWrapper.parent().$(byText(value)).click();
         return this;
+    }
+
+    public void submitRegistration(){
+        //executeJavaScript("document.body.style.zoom='65%'");
+        //submitButton.scrollTo().click();
+        $("#userNumber").pressEnter();
     }
 
 }
